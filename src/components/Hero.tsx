@@ -1,5 +1,5 @@
-
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
@@ -13,7 +13,6 @@ const Hero = () => {
     <section className="min-h-screen pt-24 pb-16 flex flex-col items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 bg-cyberpunk-gradient z-[-1]"></div>
       
-      {/* Circular glow effects */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-cyberpunk-purple/20 filter blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-cyberpunk-blue/20 filter blur-3xl"></div>
       
@@ -53,14 +52,27 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="mt-8 flex items-center">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-cyberpunk-dark bg-gray-500"></div>
-                ))}
+            <div className="mt-8 flex items-center gap-2">
+              <div className="flex -space-x-3">
+                <Avatar>
+                  <AvatarImage src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9" alt="User 1" />
+                  <AvatarFallback>U1</AvatarFallback>
+                </Avatar>
+                <Avatar>
+                  <AvatarImage src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1" alt="User 2" />
+                  <AvatarFallback>U2</AvatarFallback>
+                </Avatar>
+                <Avatar>
+                  <AvatarImage src="https://images.unsplash.com/photo-1501286353178-1ec881214838" alt="User 3" />
+                  <AvatarFallback>U3</AvatarFallback>
+                </Avatar>
+                <Avatar>
+                  <AvatarImage src="https://images.unsplash.com/photo-1452378174528-3090a4bba7b2" alt="User 4" />
+                  <AvatarFallback>U4</AvatarFallback>
+                </Avatar>
               </div>
-              <div className="ml-4">
-                <p className="text-white">500+ users already transformed</p>
+              <div>
+                <p className="text-white font-medium">500+ users already transformed</p>
               </div>
             </div>
           </div>
@@ -82,7 +94,6 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Decorative elements */}
             <div className="absolute top-1/3 -right-6 w-12 h-12 rounded-full bg-cyberpunk-blue animate-pulse-light"></div>
             <div className="absolute -bottom-4 left-1/4 w-8 h-8 rounded-full bg-cyberpunk-purple animate-pulse-light"></div>
             <div className="absolute top-0 right-1/4 w-6 h-6 rounded-full bg-cyberpunk-pink animate-pulse-light"></div>
