@@ -84,11 +84,6 @@ const Hero = () => {
                 alt="Restyle Me GPT example" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-cyberpunk-dark/80 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 p-4">
-                <p className="text-white font-semibold">Your photo, reimagined</p>
-                <p className="text-sm text-gray-300">Powered by GPT-4o</p>
-              </div>
               <div className="absolute top-4 right-4 bg-cyberpunk-vivid text-white text-xs px-2 py-1 rounded">
                 AI Generated
               </div>
