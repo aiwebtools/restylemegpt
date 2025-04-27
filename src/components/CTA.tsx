@@ -26,8 +26,8 @@ const CTA = () => {
             asChild
             className="bg-gradient-to-r from-cyberpunk-vivid to-cyberpunk-blue text-white px-8 py-6 text-lg rounded-full hover:brightness-110 transition-all button-glow"
           >
-            <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
-              Try Restyle Me GPT Now
+            <a href="https://chat.openai.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
+              Try Restyle Me GPT
             </a>
           </Button>
           
