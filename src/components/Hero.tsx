@@ -1,0 +1,96 @@
+
+import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react';
+
+const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <section className="min-h-screen pt-24 pb-16 flex flex-col items-center justify-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-cyberpunk-gradient z-[-1]"></div>
+      
+      {/* Circular glow effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-cyberpunk-purple/20 filter blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-cyberpunk-blue/20 filter blur-3xl"></div>
+      
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              <span className="text-gradient">Transform</span> Your Look
+              <span className="text-white"> With </span>
+              <span className="text-gradient">AI</span>
+            </h1>
+            
+            <div className="mt-8 space-y-6">
+              <p className="text-xl text-gray-300">
+                Upload your photo and let our AI transform you into any style you can imagine – from Ghibli animation to cyberpunk, action figures to movie scenes.
+              </p>
+              
+              <div className="flex flex-wrap gap-4">
+                <Button 
+                  asChild
+                  className="bg-gradient-to-r from-cyberpunk-vivid to-cyberpunk-blue text-white hover:brightness-110 transition-all px-8 py-6 text-lg button-glow"
+                >
+                  <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
+                    Try Restyle Me GPT
+                  </a>
+                </Button>
+                
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="bg-transparent border border-cyberpunk-purple/50 text-white hover:bg-cyberpunk-purple/10 transition-all px-6 py-6 text-lg"
+                >
+                  <a href="#how-it-works">
+                    Learn More
+                  </a>
+                </Button>
+              </div>
+            </div>
+            
+            <div className="mt-8 flex items-center">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="w-8 h-8 rounded-full border-2 border-cyberpunk-dark bg-gray-500"></div>
+                ))}
+              </div>
+              <div className="ml-4">
+                <p className="text-white">500+ users already transformed</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="relative z-10 w-full aspect-video rounded-lg overflow-hidden glass-card animate-float">
+              <img 
+                src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-2c00-622f-9229-f61c3f1cafef/raw?se=2025-04-28T00%3A07%3A54Z&sp=r&sv=2024-08-04&sr=b&scid=a88d831a-2cc0-5bf5-9197-4709398f4ee0&skoid=de76bc29-7017-43d4-8d90-7a49512bae0f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-27T21%3A02%3A33Z&ske=2025-04-28T21%3A02%3A33Z&sks=b&skv=2024-08-04&sig=I3rI44%2BvdLIxtFXtW4lLuWCf62scrwTSVK68sfB7pcU%3D" 
+                alt="Restyle Me GPT example" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-cyberpunk-dark/80 to-transparent"></div>
+              <div className="absolute bottom-0 left-0 p-4">
+                <p className="text-white font-semibold">Your photo, reimagined</p>
+                <p className="text-sm text-gray-300">Powered by GPT-4o</p>
+              </div>
+              <div className="absolute top-4 right-4 bg-cyberpunk-vivid text-white text-xs px-2 py-1 rounded">
+                AI Generated
+              </div>
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute top-1/3 -right-6 w-12 h-12 rounded-full bg-cyberpunk-blue animate-pulse-light"></div>
+            <div className="absolute -bottom-4 left-1/4 w-8 h-8 rounded-full bg-cyberpunk-purple animate-pulse-light"></div>
+            <div className="absolute top-0 right-1/4 w-6 h-6 rounded-full bg-cyberpunk-pink animate-pulse-light"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
