@@ -65,6 +65,16 @@ const Footer = () => {
                   <a href="https://www.aiwebtools.ai">More AI Tools</a>
                 </Button>
               </li>
+              <li>
+                <Button 
+                  className="w-full bg-gradient-to-r from-cyberpunk-vivid to-cyberpunk-blue text-white hover:brightness-110 transition-all button-glow"
+                  asChild
+                >
+                  <a href="https://chat.openai.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
+                    Try Restyle Me GPT
+                  </a>
+                </Button>
+              </li>
             </ul>
           </div>
           
