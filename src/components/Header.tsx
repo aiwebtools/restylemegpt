@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
+import { Menu, Wand } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,7 +24,7 @@ const Header = () => {
           <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt" 
              className="flex items-center gap-2 hover-scale">
             <div className="rounded-full p-2 bg-gradient-to-r from-cyberpunk-vivid to-cyberpunk-blue">
-              <div className="text-white font-bold text-xl">RM</div>
+              <Wand className="w-6 h-6 text-white" />
             </div>
             <div>
               <div className="text-white font-bold text-xl">Restyle Me GPT</div>
@@ -90,7 +89,6 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Mobile menu */}
       {isMobileMenuOpen && (
         <nav className="md:hidden bg-cyberpunk-dark/95 backdrop-blur-lg">
           <ul className="flex flex-col p-4 gap-4">
