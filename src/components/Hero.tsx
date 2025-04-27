@@ -80,16 +80,13 @@ const Hero = () => {
           <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <a 
               href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt"
-              className="block relative z-10 w-full aspect-video rounded-lg overflow-hidden glass-card animate-float hover:scale-105 transition-all duration-300"
+              className="block relative z-10 w-full aspect-video rounded-lg overflow-hidden glass-card hover:scale-105 transition-all duration-300"
             >
               <img 
                 src="https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-2c00-622f-9229-f61c3f1cafef/raw?se=2025-04-28T00%3A07%3A54Z&sp=r&sv=2024-08-04&sr=b&scid=a88d831a-2cc0-5bf5-9197-4709398f4ee0&skoid=de76bc29-7017-43d4-8d90-7a49512bae0f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-27T21%3A02%3A33Z&ske=2025-04-28T21%3A02%3A33Z&sks=b&skv=2024-08-04&sig=I3rI44%2BvdLIxtFXtW4lLuWCf62scrwTSVK68sfB7pcU%3D" 
                 alt="Restyle Me GPT example" 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute top-4 right-4 bg-cyberpunk-vivid text-white text-xs px-2 py-1 rounded">
-                AI Generated
-              </div>
             </a>
             
             <div className="absolute top-1/3 -right-6 w-12 h-12 rounded-full bg-cyberpunk-blue animate-pulse-light"></div>
