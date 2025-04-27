@@ -132,7 +132,7 @@ const Footer = () => {
           <p className="text-gray-400 mb-4 md:mb-0">
             <Button 
               variant="link" 
-              className="hover:text-cyberpunk-purple transition-all p-0 h-auto"
+              className="hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 p-0 h-auto"
               asChild
             >
               <a href="https://www.aiwebtools.ai">
@@ -144,7 +144,7 @@ const Footer = () => {
           <div className="flex flex-wrap gap-4 items-center justify-center">
             <Button 
               variant="ghost" 
-              className="text-gray-400 hover:text-cyberpunk-purple hover:bg-white/5 transition-all"
+              className="text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 hover:scale-105"
               asChild
             >
               <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
@@ -154,7 +154,7 @@ const Footer = () => {
             <div className="h-4 w-px bg-gray-600 hidden md:block" />
             <Button 
               variant="ghost" 
-              className="text-gray-400 hover:text-cyberpunk-purple hover:bg-white/5 transition-all"
+              className="text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 hover:scale-105"
               asChild
             >
               <a href="#faq">FAQ</a>
@@ -162,7 +162,7 @@ const Footer = () => {
             <div className="h-4 w-px bg-gray-600 hidden md:block" />
             <Button 
               variant="ghost" 
-              className="text-gray-400 hover:text-cyberpunk-purple hover:bg-white/5 transition-all"
+              className="text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 hover:scale-105"
               asChild
             >
               <a href="#disclaimer">Disclaimer</a>
