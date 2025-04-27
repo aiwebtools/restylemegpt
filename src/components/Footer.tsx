@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Wand } from "lucide-react";
 
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState(2025);
@@ -18,7 +19,7 @@ const Footer = () => {
               className="flex items-center gap-2 hover-scale mb-4"
             >
               <div className="rounded-full p-2 bg-gradient-to-r from-cyberpunk-vivid to-cyberpunk-blue">
-                <div className="text-white font-bold text-xl">RM</div>
+                <Wand className="w-6 h-6 text-white" />
               </div>
               <div>
                 <div className="text-white font-bold text-xl">Restyle Me GPT</div>
