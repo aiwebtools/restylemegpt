@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState(2025);
@@ -129,35 +130,43 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">
-            <a 
-              href="https://www.aiwebtools.ai"
-              className="hover:text-cyberpunk-purple transition-colors"
+            <Button 
+              variant="link" 
+              className="hover:text-cyberpunk-purple transition-all p-0 h-auto"
+              asChild
             >
-              © {currentYear} AI WEB TOOLS LLC All rights reserved.
-            </a>
+              <a href="https://www.aiwebtools.ai">
+                © {currentYear} AI WEB TOOLS LLC All rights reserved.
+              </a>
+            </Button>
           </p>
           
-          <div className="flex space-x-4">
-            <a 
-              href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt"
-              className="text-gray-400 hover:text-cyberpunk-purple transition-colors"
+          <div className="flex flex-wrap gap-4 items-center justify-center">
+            <Button 
+              variant="ghost" 
+              className="text-gray-400 hover:text-cyberpunk-purple hover:bg-white/5 transition-all"
+              asChild
             >
-              Restyle Me GPT
-            </a>
-            <span className="text-gray-600">|</span>
-            <a 
-              href="#faq"
-              className="text-gray-400 hover:text-cyberpunk-purple transition-colors"
+              <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
+                Restyle Me GPT
+              </a>
+            </Button>
+            <div className="h-4 w-px bg-gray-600 hidden md:block" />
+            <Button 
+              variant="ghost" 
+              className="text-gray-400 hover:text-cyberpunk-purple hover:bg-white/5 transition-all"
+              asChild
             >
-              FAQ
-            </a>
-            <span className="text-gray-600">|</span>
-            <a 
-              href="#disclaimer"
-              className="text-gray-400 hover:text-cyberpunk-purple transition-colors"
+              <a href="#faq">FAQ</a>
+            </Button>
+            <div className="h-4 w-px bg-gray-600 hidden md:block" />
+            <Button 
+              variant="ghost" 
+              className="text-gray-400 hover:text-cyberpunk-purple hover:bg-white/5 transition-all"
+              asChild
             >
-              Disclaimer
-            </a>
+              <a href="#disclaimer">Disclaimer</a>
+            </Button>
           </div>
         </div>
       </div>

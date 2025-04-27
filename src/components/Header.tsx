@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, Wand } from 'lucide-react';
@@ -36,36 +37,42 @@ const Header = () => {
             <nav>
               <ul className="flex gap-6">
                 <li>
-                  <a 
-                    href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt"
-                    className="text-white hover:text-cyberpunk-purple transition-colors"
+                  <Button 
+                    variant="ghost" 
+                    className="text-white hover:text-cyberpunk-purple hover:bg-white/5 transition-all duration-300"
+                    asChild
                   >
-                    Restyle Me GPT
-                  </a>
+                    <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
+                      Restyle Me GPT
+                    </a>
+                  </Button>
                 </li>
                 <li>
-                  <a 
-                    href="#faq" 
-                    className="text-white hover:text-cyberpunk-purple transition-colors"
+                  <Button 
+                    variant="ghost" 
+                    className="text-white hover:text-cyberpunk-purple hover:bg-white/5 transition-all duration-300"
+                    asChild
                   >
-                    FAQ
-                  </a>
+                    <a href="#faq">FAQ</a>
+                  </Button>
                 </li>
                 <li>
-                  <a 
-                    href="#disclaimer" 
-                    className="text-white hover:text-cyberpunk-purple transition-colors"
+                  <Button 
+                    variant="ghost" 
+                    className="text-white hover:text-cyberpunk-purple hover:bg-white/5 transition-all duration-300"
+                    asChild
                   >
-                    Disclaimer
-                  </a>
+                    <a href="#disclaimer">Disclaimer</a>
+                  </Button>
                 </li>
                 <li>
-                  <a 
-                    href="https://www.aiwebtools.ai" 
-                    className="text-white hover:text-cyberpunk-purple transition-colors"
+                  <Button 
+                    variant="ghost" 
+                    className="text-white hover:text-cyberpunk-purple hover:bg-white/5 transition-all duration-300"
+                    asChild
                   >
-                    More AI Tools
-                  </a>
+                    <a href="https://www.aiwebtools.ai">More AI Tools</a>
+                  </Button>
                 </li>
               </ul>
             </nav>
@@ -93,46 +100,52 @@ const Header = () => {
         <nav className="md:hidden bg-cyberpunk-dark/95 backdrop-blur-lg">
           <ul className="flex flex-col p-4 gap-4">
             <li>
-              <a 
-                href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt"
-                className="block py-2 text-white hover:text-cyberpunk-purple transition-colors"
+              <Button 
+                variant="ghost" 
+                className="w-full text-white hover:text-cyberpunk-purple hover:bg-white/5 transition-all duration-300 justify-start"
                 onClick={() => setIsMobileMenuOpen(false)}
+                asChild
               >
-                Restyle Me GPT
-              </a>
+                <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
+                  Restyle Me GPT
+                </a>
+              </Button>
             </li>
             <li>
-              <a 
-                href="#faq" 
-                className="block py-2 text-white hover:text-cyberpunk-purple transition-colors"
+              <Button 
+                variant="ghost" 
+                className="w-full text-white hover:text-cyberpunk-purple hover:bg-white/5 transition-all duration-300 justify-start"
                 onClick={() => setIsMobileMenuOpen(false)}
+                asChild
               >
-                FAQ
-              </a>
+                <a href="#faq">FAQ</a>
+              </Button>
             </li>
             <li>
-              <a 
-                href="#disclaimer" 
-                className="block py-2 text-white hover:text-cyberpunk-purple transition-colors"
+              <Button 
+                variant="ghost" 
+                className="w-full text-white hover:text-cyberpunk-purple hover:bg-white/5 transition-all duration-300 justify-start"
                 onClick={() => setIsMobileMenuOpen(false)}
+                asChild
               >
-                Disclaimer
-              </a>
+                <a href="#disclaimer">Disclaimer</a>
+              </Button>
             </li>
             <li>
-              <a 
-                href="https://www.aiwebtools.ai" 
-                className="block py-2 text-white hover:text-cyberpunk-purple transition-colors"
+              <Button 
+                variant="ghost" 
+                className="w-full text-white hover:text-cyberpunk-purple hover:bg-white/5 transition-all duration-300 justify-start"
                 onClick={() => setIsMobileMenuOpen(false)}
+                asChild
               >
-                More AI Tools
-              </a>
+                <a href="https://www.aiwebtools.ai">More AI Tools</a>
+              </Button>
             </li>
             <li>
               <Button
-                asChild
                 className="w-full bg-gradient-to-r from-cyberpunk-vivid to-cyberpunk-blue"
                 onClick={() => setIsMobileMenuOpen(false)}
+                asChild
               >
                 <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
                   Try Now
