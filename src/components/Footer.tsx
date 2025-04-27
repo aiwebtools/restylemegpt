@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -40,36 +39,31 @@ const Footer = () => {
             <h3 className="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt" 
-                  className="text-gray-400 hover:text-cyberpunk-purple transition-colors"
+                <Button 
+                  variant="ghost" 
+                  className="text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 w-full justify-start"
+                  asChild
                 >
-                  Restyle Me GPT
-                </a>
+                  <a href="#faq">FAQ</a>
+                </Button>
               </li>
               <li>
-                <a 
-                  href="#faq" 
-                  className="text-gray-400 hover:text-cyberpunk-purple transition-colors"
+                <Button 
+                  variant="ghost" 
+                  className="text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 w-full justify-start"
+                  asChild
                 >
-                  FAQ
-                </a>
+                  <a href="#disclaimer">Disclaimer</a>
+                </Button>
               </li>
               <li>
-                <a 
-                  href="#disclaimer" 
-                  className="text-gray-400 hover:text-cyberpunk-purple transition-colors"
+                <Button 
+                  variant="ghost" 
+                  className="text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 w-full justify-start"
+                  asChild
                 >
-                  Disclaimer
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://www.aiwebtools.ai" 
-                  className="text-gray-400 hover:text-cyberpunk-purple transition-colors"
-                >
-                  More AI Tools
-                </a>
+                  <a href="https://www.aiwebtools.ai">More AI Tools</a>
+                </Button>
               </li>
             </ul>
           </div>
@@ -142,16 +136,6 @@ const Footer = () => {
           </p>
           
           <div className="flex flex-wrap gap-4 items-center justify-center">
-            <Button 
-              variant="ghost" 
-              className="text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 hover:scale-105"
-              asChild
-            >
-              <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
-                Restyle Me GPT
-              </a>
-            </Button>
-            <div className="h-4 w-px bg-gray-600 hidden md:block" />
             <Button 
               variant="ghost" 
               className="text-gray-400 hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 hover:scale-105"

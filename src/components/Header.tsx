@@ -41,17 +41,6 @@ const Header = () => {
                     className="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 hover:scale-105"
                     asChild
                   >
-                    <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
-                      Restyle Me GPT
-                    </a>
-                  </Button>
-                </li>
-                <li>
-                  <Button 
-                    variant="ghost" 
-                    className="text-white hover:text-transparent hover:bg-gradient-to-r hover:from-cyberpunk-vivid hover:via-cyberpunk-blue hover:to-cyberpunk-purple hover:bg-clip-text transition-all duration-300 hover:scale-105"
-                    asChild
-                  >
                     <a href="#faq">FAQ</a>
                   </Button>
                 </li>
@@ -80,7 +69,7 @@ const Header = () => {
               className="bg-gradient-to-r from-cyberpunk-vivid to-cyberpunk-blue hover:brightness-110 transition-all button-glow"
             >
               <a href="https://chatgpt.com/g/g-680eb3e1e3508191a662b9b98906e18a-restyle-me-gpt">
-                Try Now
+                Try Restyle Me GPT
               </a>
             </Button>
           </div>
