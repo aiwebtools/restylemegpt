@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { useState, useEffect } from 'react';
@@ -86,7 +85,7 @@ const Hero = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/MVBe6_o4nMw"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                 title="AI Photo Transformation Demo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
