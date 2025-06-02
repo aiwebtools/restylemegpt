@@ -40,12 +40,31 @@
   }
   
   body {
-    @apply bg-cyberpunk-dark text-foreground antialiased overflow-x-hidden;
+    @apply bg-gradient-to-br from-cyberpunk-dark via-[#1a1f3a] to-[#0f1219] text-foreground antialiased overflow-x-hidden;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    background-attachment: fixed;
   }
 
   html {
     @apply scroll-smooth;
+  }
+
+  /* Enhanced scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(26, 31, 44, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #8B5CF6, #1EAEDB);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #9b87f5, #3DBEF0);
   }
 }
 
@@ -60,34 +79,118 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_4px_24px_-2px_rgba(139,92,246,0.3)];
+    @apply backdrop-blur-2xl bg-white/10 border border-white/20 shadow-[0_8px_32px_-4px_rgba(139,92,246,0.4),0_4px_16px_-2px_rgba(30,174,219,0.3)];
   }
   
   .neo-blur {
-    @apply backdrop-blur-2xl bg-black/40 border border-white/10;
+    @apply backdrop-blur-3xl bg-black/50 border border-white/20;
   }
   
   .text-gradient {
     @apply bg-gradient-to-r from-cyberpunk-purple via-cyberpunk-blue to-cyberpunk-vivid bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: shimmer 4s ease-in-out infinite;
   }
   
   .text-glow {
-    text-shadow: 0 0 10px rgba(155, 135, 245, 0.5), 0 0 20px rgba(155, 135, 245, 0.3);
+    text-shadow: 0 0 20px rgba(155, 135, 245, 0.8), 0 0 40px rgba(155, 135, 245, 0.6), 0 0 60px rgba(30, 174, 219, 0.4);
   }
 
   .neon-border {
-    @apply border border-cyberpunk-vivid/50 shadow-[0_0_15px_rgba(139,92,246,0.5)];
+    @apply border-2 border-cyberpunk-vivid/60 shadow-[0_0_30px_rgba(139,92,246,0.8),inset_0_0_30px_rgba(139,92,246,0.2)];
   }
   
   .hover-scale {
-    @apply transition-transform duration-300 hover:scale-105;
+    @apply transition-all duration-500 hover:scale-110 hover:rotate-1;
   }
   
   .bg-cyberpunk-gradient {
-    @apply bg-gradient-to-br from-cyberpunk-dark via-[#24293a] to-[#1d2235];
+    background: linear-gradient(135deg, 
+      #1A1F2C 0%, 
+      #24293a 25%, 
+      #2d1b69 50%, 
+      #1d2235 75%, 
+      #0f1219 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
   }
 
   .button-glow {
-    @apply relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-cyberpunk-vivid/50 before:to-cyberpunk-blue/50 before:blur-xl before:opacity-75 before:-z-10;
+    @apply relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-cyberpunk-vivid/60 before:via-cyberpunk-blue/60 before:to-cyberpunk-purple/60 before:blur-2xl before:opacity-75 before:-z-10;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(30, 174, 219, 0.3);
+  }
+
+  .divine-glow {
+    box-shadow: 
+      0 0 20px rgba(139, 92, 246, 0.6),
+      0 0 40px rgba(139, 92, 246, 0.4),
+      0 0 80px rgba(30, 174, 219, 0.3),
+      inset 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Enhanced animations */
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes divineFloat {
+    0%, 100% { 
+      transform: translateY(0) scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    25% { 
+      transform: translateY(-15px) scale(1.05) rotate(1deg);
+      opacity: 0.9;
+    }
+    50% { 
+      transform: translateY(-25px) scale(1.1) rotate(0deg);
+      opacity: 0.8;
+    }
+    75% { 
+      transform: translateY(-15px) scale(1.05) rotate(-1deg);
+      opacity: 0.9;
+    }
+  }
+
+  @keyframes divineGlow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4),
+                  0 0 40px rgba(139, 92, 246, 0.3),
+                  0 0 80px rgba(30, 174, 219, 0.2);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(139, 92, 246, 0.8),
+                  0 0 80px rgba(139, 92, 246, 0.6),
+                  0 0 120px rgba(30, 174, 219, 0.4);
+    }
+  }
+
+  @keyframes divinePulse {
+    0%, 100% { 
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% { 
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-divine-float {
+    animation: divineFloat 8s ease-in-out infinite;
+  }
+
+  .animate-divine-glow {
+    animation: divineGlow 6s ease-in-out infinite;
+  }
+
+  .animate-divine-pulse {
+    animation: divinePulse 4s ease-in-out infinite;
   }
 }
