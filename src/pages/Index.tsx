@@ -14,12 +14,12 @@ import ConsentPopup from "@/components/ConsentPopup";
 const Index = () => {
   useEffect(() => {
     // Update the document title for better SEO
-    document.title = "AI Web Tools - #1 AI Photo Transformation Tools | Restyle Me GPT";
+    document.title = "Restyle Me GPT - Transform Your Photos with AI | AI Web Tools";
     
     // Add meta description dynamically
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Transform your photos with AI Web Tools\' Restyle Me GPT. Best AI tools for photo transformation, style transfer, and image generation. Turn yourself into anime, Ghibli characters, action figures & more.');
+      metaDescription.setAttribute('content', 'Restyle Me GPT by AI Web Tools: Transform yourself into anime, Ghibli characters, action figures & more. Best AI photo transformation tool. Try it free now!');
     }
   }, []);
 
